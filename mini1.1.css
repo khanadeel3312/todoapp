@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Added Google Font Roboto for better readability */
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Changed body background color to a lighter shade */
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 50px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 550px; /* Increased max-width for better layout */
+    background: #fff;
+    margin: 50px auto 20px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a lifted effect */
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 25px; /* Slightly reduced image size */
+    margin-right: 10px; /* Adjusted margin */
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    background: #edeef0;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    padding: 0 0px; /* Adjusted padding */
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+    font-size: 16px; /* Increased font size */
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 12px 50px;
+    background: #f0250f;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background 0.3s ease; /* Added transition for smoother hover effect */
+}
+
+button:hover {
+    background: #d31600; /* Darkened color on hover */
+}
+
+ul li {
+    list-style:none;
+    font-size: 16px; /* Adjusted font size */
+    padding: 12px 8px 12px 50px;
+ user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex; /* Changed display to flex for better alignment */
+    align-items: center; /* Center items vertically */
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%); /* Centered the bullet vertically */
+    left: 0;
+   
+   margin-left: 10px; /* Added margin for spacing */
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+
+ul li span {
+    /* Pushed the delete icon to the right */
+    position:absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height:40px;
+    text-align: center;
+    border-radius: 10px; /* Added transition for smoother hover effect */
+}
+
+ul li span:hover {
+    background: #939497a9;
+   /* Added padding on hover for a clickable appearance */
+}
